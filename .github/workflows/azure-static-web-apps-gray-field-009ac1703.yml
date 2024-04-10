@@ -39,10 +39,9 @@ jobs:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_GRAY_FIELD_009AC1703 }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
-          app_location: "/"
+          app_location: "dist/papa-freelance-website"
           skip_app_build: "true"
           api_location: ""
-          output_location: "dist/papa-freelance-website"
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
