@@ -21,6 +21,7 @@ jobs:
           lfs: false
 
       - name: Install dependencies
+        id: install
         run: |
           npm install -g pnpm
           pnpm install --prod
@@ -28,6 +29,7 @@ jobs:
         shell: bash
 
       - name: Build
+        id: build
         run: |
           pnpm build
         shell: bash
