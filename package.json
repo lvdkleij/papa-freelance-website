@@ -8,7 +8,9 @@
       "build": "ng build",
       "watch": "ng build --watch --configuration development",
       "test": "ng test",
-      "serve:ssr:papa-freelance-website": "node dist/papa-freelance-website/server/server.mjs"
+      "serve:ssr:papa-freelance-website": "node dist/papa-freelance-website/server/server.mjs",
+      "prettier:write": "prettier . --write",
+      "prepare": "husky"
    },
    "private": true,
    "dependencies": {
@@ -34,12 +36,14 @@
       "@types/express": "^4.17.17",
       "@types/jasmine": "~5.1.0",
       "@types/node": "^18.18.0",
+      "husky": "^9.0.11",
       "jasmine-core": "~5.1.0",
       "karma": "~6.4.0",
       "karma-chrome-launcher": "~3.2.0",
       "karma-coverage": "~2.2.0",
       "karma-jasmine": "~5.1.0",
       "karma-jasmine-html-reporter": "~2.1.0",
+      "lint-staged": "^15.2.2",
       "only-allow": "1.2.1",
       "prettier": "3.2.5",
       "typescript": "~5.4.2"
