@@ -28,7 +28,7 @@ jobs:
 
       - name: Build
         run: |
-          pnpm ng build
+          npx ng build
         shell: bash
 
       - name: Deploy
