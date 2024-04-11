@@ -1,18 +1,18 @@
 import { Component, HostListener, Renderer2 } from '@angular/core'
 import { shouldFloatTrigger } from './header.animations'
+import { RouterLink } from '@angular/router'
 
 @Component({
    selector: 'atlas-header-component',
-   standalone: true,
    templateUrl: 'header.component.html',
    styleUrl: 'header.component.scss',
+   standalone: true,
+   imports: [RouterLink],
    animations: [shouldFloatTrigger],
 })
 export class AtlasHeaderComponent {
    shouldFloat = false
    floatThreshold = 75
-
-   constructor(private readonly renderer: Renderer2) {}
 
    @HostListener('window:scroll', ['$event.target']) onScrollEvent(
       $event: any
@@ -20,10 +20,8 @@ export class AtlasHeaderComponent {
       const scrollTop = $event.scrollingElement.scrollTop
       if (!this.shouldFloat && scrollTop >= this.floatThreshold) {
          this.shouldFloat = true
-         console.log(`shouldFloat 1 = ${this.shouldFloat}`)
       } else if (this.shouldFloat && scrollTop < this.floatThreshold) {
          this.shouldFloat = false
-         console.log(`shouldFloat 2 = ${this.shouldFloat}`)
       }
    }
 }

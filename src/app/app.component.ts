@@ -5,10 +5,7 @@ import { AtlasHeaderComponent } from '../libs/components/header/header.component
 @Component({
    selector: 'app-root',
    standalone: true,
-   imports: [RouterOutlet, AtlasHeaderComponent],
-   templateUrl: './app.component.html',
-   styleUrl: './app.component.scss',
+   imports: [RouterOutlet],
+   template: '<router-outlet></router-outlet>',
 })
-export class AppComponent {
-   title = 'papa-freelance-website'
-}
+export class AppComponent {}

@@ -1,19 +1,20 @@
 <nav class="px-24" [@shouldFloat]="shouldFloat">
    <ul class="flex h-full items-center py-4 justify-between h-20">
-      <li><div>Logo</div></li>
+      <li>
+         <a routerLink=""><div>Logo</div></a>
+      </li>
       <li class="h-full">
          <ul class="h-full items-center flex gap-4">
             <li class="h-full">
-               <button class="h-full px-3 py-2">Home</button>
+               <a class="inline-block h-full px-3 py-2">Diensten</a>
             </li>
             <li class="h-full">
-               <button class="h-full px-3 py-2">Diensten</button>
+               <a class="inline-block h-full px-3 py-2">Trainingen</a>
             </li>
             <li class="h-full">
-               <button class="h-full px-3 py-2">Trainingen</button>
-            </li>
-            <li class="h-full">
-               <button class="h-full px-3 py-2">Over mij</button>
+               <a class="inline-block h-full px-3 py-2" routerLink="/about-me"
+                  >Over mij</a
+               >
             </li>
          </ul>
       </li>
