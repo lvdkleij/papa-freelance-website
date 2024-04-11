@@ -24,7 +24,7 @@ jobs:
            id: install
            run: |
               npm install -g pnpm
-              pnpm install --prod
+              pnpm install
               pnpm install @angular/cli
            shell: bash
 
