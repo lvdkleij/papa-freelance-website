@@ -1,8 +1,8 @@
-<nav class="px-24">
-   <ol class="flex h-full items-center py-4 justify-between h-20">
+<nav class="px-24" [@shouldFloat]="shouldFloat">
+   <ul class="flex h-full items-center py-4 justify-between h-20">
       <li><div>Logo</div></li>
       <li class="h-full">
-         <ol class="h-full items-center flex gap-4">
+         <ul class="h-full items-center flex gap-4">
             <li class="h-full">
                <button class="h-full px-3 py-2">Home</button>
             </li>
@@ -15,8 +15,8 @@
             <li class="h-full">
                <button class="h-full px-3 py-2">Over mij</button>
             </li>
-         </ol>
+         </ul>
       </li>
       <li class="h-full"><button class="h-full px-3 py-2">Contact</button></li>
-   </ol>
+   </ul>
 </nav>

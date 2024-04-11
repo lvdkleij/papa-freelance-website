@@ -9,7 +9,7 @@
       "build": "ng build",
       "watch": "ng build --watch --configuration development",
       "test": "ng test",
-      "serve:ssr:papa-freelance-website": "node dist/papa-freelance-website/server/server.mjs",
+      "serve:ssr": "http-server ./dist/papa-freelance-website -o",
       "prettier:write": "prettier . --write",
       "prepare": "husky"
    },
@@ -43,6 +43,7 @@
       "eslint": "^9.0.0",
       "eslint-config-prettier": "^9.1.0",
       "eslint-plugin-prettier": "^5.1.3",
+      "http-server": "^14.1.1",
       "husky": "^9.0.11",
       "install": "^0.13.0",
       "jasmine-core": "~5.1.0",
