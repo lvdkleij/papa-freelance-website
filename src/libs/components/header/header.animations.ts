@@ -4,19 +4,14 @@ export const shouldFloatTrigger = trigger('shouldFloat', [
    state(
       'true',
       style({
-         left: '5rem',
-         right: '5rem',
+         left: '10%',
+         right: '10%',
          top: '1rem',
-         border: '1px solid black',
-         borderRadius: '20px',
+         backgroundColor: 'white',
+         borderRadius: '24px',
          padding: '0 40px',
-      })
-   ),
-   state(
-      'false',
-      style({
-         left: '0',
-         right: '0',
+         margin: '0 auto',
+         boxShadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px',
       })
    ),
    transition('* <=> *', [animate('0.25s')]),

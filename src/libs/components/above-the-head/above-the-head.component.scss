@@ -1,0 +1,80 @@
+.bg {
+   background: rgb(77, 100, 203);
+   background: linear-gradient(
+      180deg,
+      rgba(77, 100, 203, 1) 0%,
+      rgba(72, 100, 203, 1) 8%,
+      rgba(67, 101, 203, 1) 16%,
+      rgba(62, 99, 204, 1) 24%,
+      rgba(58, 101, 203, 1) 31%,
+      rgba(51, 102, 204, 1) 38%,
+      rgba(44, 102, 201, 1) 44%,
+      rgba(40, 104, 200, 1) 50%,
+      rgba(34, 106, 201, 1) 55%,
+      rgba(29, 106, 201, 1) 60%,
+      rgba(24, 109, 201, 1) 65%,
+      rgba(18, 113, 202, 1) 69%,
+      rgba(35, 125, 209, 1) 73%,
+      rgba(53, 135, 212, 1) 76%,
+      rgba(74, 148, 217, 1) 80%,
+      rgba(94, 160, 222, 1) 83%,
+      rgba(115, 173, 226, 1) 86%,
+      rgba(136, 185, 231, 1) 89%,
+      rgba(157, 198, 236, 1) 91%,
+      rgba(183, 213, 241, 1) 94%,
+      rgba(204, 225, 245, 1) 96%,
+      rgba(229, 240, 250, 1) 98%,
+      rgba(255, 255, 255, 1) 100%
+   );
+}
+
+.outer-container {
+   width: 100%;
+   background-color: rgba(255, 0, 0, 0.122);
+   max-width: 120rem;
+}
+
+.inner-container {
+   container: myContainer2 / inline-size;
+   color: white;
+   max-width: 70rem;
+   margin: auto;
+}
+
+.item--1 {
+   flex: 1;
+   padding: 0 1rem;
+}
+
+h1 {
+   font-size: clamp(3.25rem, 7vw, 4.5rem);
+   line-height: 1.2;
+   position: relative;
+   width: calc(100% + clamp(25%, 4vw, 30%));
+}
+
+p {
+   font-size: 1.125rem;
+   line-height: 1.625;
+}
+
+.item--2 {
+   flex: 1;
+}
+
+@container myContainer2 (width < 40rem) {
+   .item--1 {
+      min-width: 100%;
+      padding: 0;
+   }
+
+   h1 {
+      width: 100%;
+      padding: 0 1rem;
+      font-size: clamp(3rem, 10vw, 4.5rem);
+   }
+
+   p {
+      padding: 0 1rem;
+   }
+}
